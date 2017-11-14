@@ -53,6 +53,8 @@ function loadData() {
             html: items.join( "" )
         }).appendTo( $nytElem );
   
+    }).fail(function(e){
+        $nytHeaderElem.text('New York Times Articles Could Not Be Loaded');
     });
 
     return false;
